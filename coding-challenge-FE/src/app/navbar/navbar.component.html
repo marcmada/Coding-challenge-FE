@@ -1,0 +1,9 @@
+<div class="navbar p-0">
+    
+    <div class="title-container">
+        <h1 class="mb-0"> {{ title }} </h1>
+    </div>
+</div>
+<button [hidden]="!isAuth" (click)="goToLogin()">Login</button>
+<button [hidden]="!isAuth" (click)="goToRegister()">Register</button>
+<button [hidden]="isAuth" (click)="goToLogout()">Register</button>

@@ -1,0 +1,69 @@
+<div class="container-fluid register-container">
+    <form #registerForm="ngForm" (ngSubmit)="register()">
+        <div>
+            <div class="register-container">
+                <input required type="text" class="form-control register-input" placeholder="Name"
+                    [(ngModel)]="registerModel.name" name="name" #name="ngModel" required />
+                <div *ngIf="name.touched || !name.pristine">
+                    <div class="form-error" *ngIf="name.errors?.required">
+                        Name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-container">
+                <input required type="text" class="form-control register-input" placeholder="Username"
+                    [(ngModel)]="registerModel.username" name="username" #username="ngModel" required />
+                <div *ngIf="username.touched || !username.pristine">
+                    <div class="form-error" *ngIf="username.errors?.required">
+                        Username is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-container">
+                <input required type="password" class="form-control register-input" placeholder="Password"
+                    [(ngModel)]="registerModel.password" name="password" #password="ngModel" required />
+                <div *ngIf="password.touched || !password.pristine">
+                    <div class="form-error" *ngIf="password.errors?.required">
+                        Password is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-container">
+                <input required type="password" class="form-control register-input" placeholder="Confirm password"
+                    [(ngModel)]="confirmPassword" name="password2" #password2="ngModel" required />
+                <div *ngIf="password2.touched || !password2.pristine">
+                    <div class="form-error" *ngIf="password2.errors?.required">
+                        Confirm password is required.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="register-container">
+                <input required type="text" class="form-control register-input" placeholder="Team name"
+                    [(ngModel)]="registerModel.teamName" name="teamName" #teamName="ngModel" required />
+                <div *ngIf="teamName.touched || !teamName.pristine">
+                    <div class="form-error" *ngIf="teamName.errors?.required">
+                        Team's name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="register-container">
+                <input required type="text" class="form-control register-input" placeholder="Robots"
+                    [(ngModel)]="robotsString" name="robots" #robots="ngModel" required />
+                <div *ngIf="robots.touched || !robots.pristine">
+                    <div class="form-error" *ngIf="robots.errors?.required">
+                        Robots are required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-button-container">
+            <button class="register-button" [disabled]="!registerForm.valid" type="submit">Register</button>
+        </div>
+    </form>
+</div>

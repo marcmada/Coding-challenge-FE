@@ -1,0 +1,52 @@
+.planet-container {
+    border: 1px solid rgb(227, 227, 227);
+    margin: 5px 0px 5px 0px;
+    height: 18vh;
+}
+
+label, .status {
+    font-weight: bold;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-photo-container{
+    align-items: center;
+}
+.planet-name{
+    font-size: 0.7em;
+    margin: 0;
+    height: 20%;
+}
+.planet-image{
+    height: 80%;
+    background-image: url('../../assets/planet.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.description {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.captain-name {
+    font-size: 0.6em;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+}
+
+.robots{
+    font-size: 0.8em;
+    margin-bottom: 0;
+    margin-left: 0.5em;
+
+}
+
+.home-page-container{
+    width: 100vw;
+}

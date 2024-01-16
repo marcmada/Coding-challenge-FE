@@ -1,0 +1,79 @@
+<div class="home-page-container">
+    <div *ngFor="let planet of planets">
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="" alt="Photo1">
+                    <label>{{planet.name}}</label>
+                </div>
+                <div class="col-6" *ngIf="planet.description === null || planet.description === undefined">
+                    <div class="row">
+                        <div class="col">
+                            No description yet :/
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-6" *ngIf="planet.description !== null && planet.description !== undefined">
+                    <div class="row">
+                        <div class="col">
+                            {{planet.description}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>by captain</label> {{planet.captainName}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Robots:</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-3 status" [style.color]="getStatusColor(planet.statusName)">
+                    {{planet.statusName}}
+                </div>
+            </div>
+        </div> -->
+        <div class="planet-container container-xxl">
+            <div class="row h-100">
+                <div class="col-3 h-100 m-0 p-0">
+                    <div class="h-100 d-flex flex-column planet-photo-container">
+                        <div class="w-100 planet-image"></div>
+                        <label class="planet-name">{{planet.name}}</label>
+                    </div>
+                </div>
+                <div class="col-6" *ngIf="planet.description === null || planet.description === undefined">
+                    <div class="row">
+                        <div class="col" style="font-size: 1em">
+                            No description yet :/
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-6" *ngIf="planet.description !== null && planet.description !== undefined">
+                        <div class="col p-0">
+                            <p class="description">
+                                {{planet.description}}
+                            </p>
+                        </div>
+                        <div class="col d-flex p-0 mt-1">
+                            <label class="mb-0" style="font-size: 0.6em">by captain:</label> <p class="captain-name">{{planet.captainName}}</p>
+                        </div>
+                        <div class="col d-flex p-0 mt-1">
+                            <label class="mb-0" style="font-size: 0.8em">Robots:</label>
+                            <div class="robots" *ngFor="let robot of planet.robots"> 
+                                <p>{{robot}}</p>
+                            </div>
+                        </div>
+                </div>
+    
+                <div class="col-3 status" [style.color]="getStatusColor(planet.statusName)">
+                    {{planet.statusName}}
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
